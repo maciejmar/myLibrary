@@ -8,7 +8,7 @@ router.get('/new', (req,res) => {
 res.render('authors/new', {author: new Author() })
 });
 
-//all authors route
+//all authors - route
 router.get('/', async (req,res) => {
     let searchConstrains = {};
     if(req.query.name != null && req.query.name !=''){
