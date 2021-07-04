@@ -13,7 +13,6 @@ router.get('/', async (req,res) => {
     let searchConstrains = {};
     if(req.query.name != null && req.query.name !=''){
         searchConstrains.name = new RegExp(req.query.name, 'i');
-    
     }
     try{
         const authors = await Author.find(searchConstrains);
