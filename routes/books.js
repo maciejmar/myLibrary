@@ -89,7 +89,7 @@ router.post('/', upload.single('cover'), async (req, res) => {
           book: book
         };
         if(hasError) {
-          params.errorMessage = "Error Creating Book";
+          params.errorMessage = "Error by the creating Book";
         }
         res.render('books/new',params);
       }catch{
