@@ -15,14 +15,13 @@
     <input type="date" name="publishedBefore" value="<%= 
     searchConstrains.publishedBefore %>">
 </div>
-
-
-
-    <button type="submit">Search</button>
+<button type="submit">Search</button>
 </form>
 <div>
-  <br>
-     <% books.forEach(book => { %>
-       <img height="150" width="100" src="<%= book.coverImagePath %>">
-     <% }) %>
-</div>
+    <br>
+       <% books.forEach(book => { %>
+         <img height="150" width="100" src="<%= book.coverImagePath %>"> 
+       <% }) %>
+  </div>
+
+
