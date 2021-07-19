@@ -47,11 +47,7 @@ router.post('/', async (req, res) => {
     
     const fileName = req.file != null ? req.file.filename : null;
 
-    
-    
-    console.log('uploadPath ',uploadPath);
-    console.log('title ', req.title);
-    console.log('descript=',req.body.description, ' page count - ',req.body.pageCount);
+
     const book = new Book ({
       title: req.body.title,
       author: req.body.author,
