@@ -8,6 +8,7 @@ const indexRouter = require('./routes/index');
 const authorRouter = require('./routes/authors');
 const bookRouter = require('./routes/books');
 const bodyParser = require('body-parser');
+const methodOverride = require('method-override');
 
 app.set('view engine' , 'ejs');
 app.set('views', __dirname + '/views');
@@ -19,7 +20,7 @@ app.use(expressLayouts);
 app.use(express.urlencoded({extended: false})); 
 app.use(express.json());   
 app.use(bodyParser.urlencoded({ extended: false }))
-
+app.use(methodOverride('_method'));
 app.use(express.static('public')); 
 
 const mongoose = require('mongoose');
