@@ -125,5 +125,5 @@ router.post('/', async (req, res) => {
       
       return newString;
     }
-    
+module.exports = makeString;
 module.exports = router;
